@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<configuration description="Runs a CTS plan from a pre-existing CTS installation" >
+
+    <!-- <option
+        name="wifiSsdk"
+        value="na" 
+        desc="wifi用户名"/>
+
+    <option
+        name="wifiPsk"
+        value="na" 
+        desc="wifi密码"/>
+
+    <option
+        name="p"
+        value="NA" 
+        desc="app包名"/>
+
+    <option
+        name="a"
+        value="NA" 
+        desc="主activity"/> -->
+
+    <option
+        name="v"
+        value="20" 
+        desc="事件数"/>
+
+    <!-- <option
+        name="app-path"
+        value="NA"   
+        desc="需要从本地安装的app的路径"/> -->
+
+    <option
+        name="throttle"
+        value="300" 
+        desc="默认为300毫秒"/>
+
+    
+   
+
+    <option
+        name="reboot"
+        value="false" 
+        desc="是否重启,默认为不重启"/>
+
+    <option
+        name="enable-root"
+        value="false" 
+        desc="是否root机器，默认为不root机器，如果在工程机上建议设置为true，非工程机，建议设置为false"/>
+
+    <option
+        name="skip-uninstall-app"
+        desc="测试结束后，一般会卸载测试应用，可以通过该选项设置是否卸载，true为不卸载,默认为不卸载"
+        value="true" />
+
+    <option
+        name="device-unlock"
+        desc="是否解锁,默认为不解锁"
+        value="false" />
+
+    <option
+        name="bugreport"
+        desc="是否保存bugreport信息，默认不保存"
+        value="false" />
+
+    <option
+        name="tracefile"
+        desc="是否保存trace.txt文件，默认不保存"
+        value="false" />
+
+    <option
+        name="pct-tap"
+        desc="点击事件的百分比"
+        value="25" />
+
+    <option
+        name="pct-motion"
+        desc="点击事件的百分比"
+        value="0" />
+
+    <option
+        name="pct-drag"
+        desc="点击事件的百分比"
+        value="30" />
+
+    <option
+        name="pct-nav"
+        desc="点击事件的百分比"
+        value="15" />
+
+    <option
+        name="pct-majornav"
+        desc="点击事件的百分比"
+        value="15" />
+
+    <option
+        name="pct-syskeys"
+        desc="点击事件的百分比"
+        value="15" />
+
+    <build_provider class="com.android.cts.tradefed.build.CtsBuildProvider" />
+
+    <device_recovery class="com.android.tradefed.device.WaitDeviceRecovery" />
+
+    <test class="com.android.cts.tradefed.testtype.MonkeyTest" />
+
+    <logger class="com.android.tradefed.log.StdoutLogger" />
+
+    <result_reporter class="com.android.cts.tradefed.result.CtsXmlResultReporter" />
+
+    <result_reporter class="com.android.cts.tradefed.result.IssueReporter" />
+
+</configuration>
