@@ -16,15 +16,13 @@
 -->
 <configuration description="Runs a CTS plan from a pre-existing CTS installation" >
 
-    <!-- <option
+   <!--  <option
         name="wifiSsdk"
-        value="na" 
-        desc="wifi用户名"/>
+        value="58-office" />
 
     <option
         name="wifiPsk"
-        value="na" 
-        desc="wifi密码"/>
+        value="On1CGiKQ;IyJ^$56MG;U" /> -->
 
     <option
         name="p"
